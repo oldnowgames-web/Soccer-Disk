@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d1b14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Soccer Disk</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="peerjs.min.js"></script>
+</head>
+<body>
+<div id="app">
+<div class="bar" style="display:none"><span class="score"><span class="blue"><span id="ln">Você</span> <span id="sb">0</span></span> × <span class="red"><span id="sr">0</span> <span id="rn">CPU</span></span></span><span id="msg"></span><span class="bt"><button class="pbtn" id="fs" title="Tela cheia">⛶</button><button class="pbtn" id="pz" style="visibility:hidden">⏸ Pausa</button></span></div>
+<div id="area"><div class="wrap" id="wrap">
+<canvas id="c" width="1000" height="620"></canvas>
+<div class="tip" id="tip"><span id="tip-t"></span> <button class="pbtn" id="tip-b" style="display:none;margin-left:8px">Entendi!</button> <button class="pbtn" id="tip-s" style="background:transparent;color:#fff;box-shadow:none;font-size:.8em;text-decoration:underline">Pular</button></div>
+<div class="screen on" id="s-menu"><h1>SOCCER DISK</h1><div style="opacity:.9;margin-bottom:8px">Puxe, solte e faça o gol!</div><button class="btn" id="b-play">Jogar</button><button class="btn alt" id="b-skins">Skins</button><button class="btn alt" id="b-set">Configurações</button></div>
+<div class="screen" id="s-set"><h2>Configurações</h2>
+<div class="opt"><label>Sons</label><div class="seg" id="g-snd"></div></div>
+<div class="opt"><label>Volume</label><div class="seg" id="g-vol"></div></div>
+<div class="opt"><label>Screen shake</label><div class="seg" id="g-shake"></div></div>
+<button class="btn" id="b-tut">Rever tutorial</button>
+<button class="btn alt" id="b-back" style="margin-top:8px">Voltar</button></div>
+<div class="screen" id="s-skins"><h2>Skins</h2><div class="opt"><label>Seus discos</label><div class="skrow" id="g-dsk"></div></div><div class="opt"><label>Bola</label><div class="skrow" id="g-bsk"></div></div><button class="btn" id="b-sback" style="margin-top:6px">Voltar</button></div>
+<div class="screen" id="s-prep"><h2>Nova partida</h2><div class="opt" id="row-diff"><label>Dificuldade</label><div class="seg" id="g-diff"></div></div><div class="opt"><label>Gols para vencer</label><div class="seg" id="g-goals"></div></div><button class="btn" id="b-start" style="margin-top:8px">Começar</button><button class="btn alt" id="b-pback">Voltar</button></div>
+<div class="screen" id="s-mode"><h2>Como quer jogar?</h2><button class="btn" id="m-cpu">Contra CPU</button><button class="btn" id="m-loc">2 jogadores (mesmo PC)</button><button class="btn" id="m-on">Multiplayer</button><button class="btn alt" id="m-back">Voltar</button></div>
+<div class="screen" id="s-online"><h2>Multiplayer</h2><div class="opt"><label>Formato</label><div class="seg" id="g-fmt"></div></div><div class="opt"><label>Gols para vencer</label><div class="seg" id="g-goals2"></div></div><button class="btn" id="o-create">Criar sala</button><div class="row"><input class="ci" id="code-in" maxlength="5" placeholder="CÓDIGO" autocomplete="off"><button class="btn alt" id="o-join" style="min-width:auto;font-size:1.4em;padding:.3em .9em">Entrar</button></div><div id="on-msg" style="min-height:1.2em;max-width:85%;color:#ffb3b3"></div><button class="btn alt" id="o-back" style="min-width:auto;font-size:1.3em;padding:.25em 1.2em;min-height:0">Voltar</button></div>
+<div class="screen" id="s-lobby"><h2>Sala</h2><div class="code" id="lb-code">-----</div><div id="lb-list"></div><div id="lb-info" style="opacity:.85;max-width:80%"></div><button class="btn" id="lb-start">Iniciar partida</button><button class="btn alt" id="lb-leave">Sair</button></div>
+<button class="kb" id="kb">CHUTAR</button>
+<div class="screen" id="s-pause"><h2>Jogo pausado</h2><button class="btn" id="b-cont">Continuar</button><button class="btn alt" id="b-pset">Configurações</button><button class="btn alt" id="b-pmenu">Voltar ao menu</button></div>
+<div class="screen" id="s-end"><h2 id="end-t"></h2><button class="btn" id="b-again">Jogar de novo</button><button class="btn alt" id="b-emenu">Menu</button></div>
+</div></div></div>
+<div id="rot" class="on"><div class="ic">📱↻</div><div>Gire o celular para jogar</div><button class="pbtn" id="rot-ok" style="font-size:20px">Jogar assim mesmo</button></div>
+<script src="script.js"></script>
+</body>
+</html>

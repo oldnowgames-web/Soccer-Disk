@@ -1,0 +1,19 @@
+SOCCER DISK
+===========
+Abra o arquivo index.html no navegador para jogar.
+
+Arquivos:
+- index.html     estrutura (menus, telas e placar)
+- style.css      visual dos menus, botoes e placar
+- script.js      todo o jogo (fisica, IA, sons, tutorial e multiplayer)
+- peerjs.min.js  biblioteca PeerJS 1.5.4 (conexao entre jogadores)
+
+Modos: contra CPU, 2 jogadores no mesmo PC e multiplayer online (1v1, 2v2, 3v3).
+Multiplayer: um jogador cria a sala, passa o codigo de 5 letras e os amigos entram com ele.
+Controles do multiplayer: WASD ou setas para andar, ESPACO para chutar.
+A fonte Lilita One e carregada do Google Fonts (precisa de internet; sem ela usa uma fonte reserva).
+
+Celular:
+- Jogue com o celular deitado (modo paisagem). O jogo entra em tela cheia ao tocar em Jogar.
+- iPhone (Safari) nao tem tela cheia por botao: toque em Compartilhar > Adicionar a Tela de Inicio e abra pelo icone.
+- Multiplayer no celular: arraste no lado esquerdo da tela para andar; toque no lado direito (ou no botao CHUTAR) para chutar.
